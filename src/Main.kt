@@ -1,34 +1,26 @@
 fun main() {
-    //Data types for whole numbers.
+    //Data types for real numbers.
+    //Double  and Float
 
-    //Data type Byte uses only 8bits of memory.
-    //since 2^8 = 256, it can store 256 number.
-    //and since Byte is used to hold negative numbers also.
-    //a Byte type var can store values from -128 - 127.
-    var tinynumber : Byte = 45;
+    //Double is the default
+    //So this is a double
+    var realNum1 = 2.56
+    var realNum2 : Double  = 3.7849342
 
-    //do this for the other data types and check the results
-    println("Size of Short in bits is =  ${Short.SIZE_BITS}")
-    println("Byte's range = ${Short.MIN_VALUE} - ${Short.MAX_VALUE}")
+    //Even if specify the data type suing :Float we still have to put F after the number
+    //var realnum3 : Float = 3.566. is wrong
+    //we could also do this var realnum3 = 3.566f
+    var realnum3 : Float = 3.566F
 
-    //Short data type uses 16 bits of memory
-    //So it can store -32,768 to 32,767.
-    var smallNumber : Short  = 32000;
+    //The difference between double and float is in their precision
+    //the output of code below should be something like this...
+    //fl = 1.1234568
+    //doub = 1.1234567891234568
+    //So we use double when we want more than 8 digits after decimal point or our priority is precision
+    val fl: Float = 1.123456789123456789f
+    val dob: Double = 1.123456789123456789
+    println("fl = $fl")
+    println("doub = $dob")
 
-    //Int uses 32 bits of memory.
-    //so it can store values from -2,147,483,648 to 2,147,483,647.
-    var bigNumber : Int = 2000000
 
-    //Long uses 64 bits of memeory.
-    //So it is used to hold a very large value;
-    var largeNumber : Long = 20000000000000000
-    //Instead of using :Long we could also do var large number = 200000000000L
-    //the capital L(case doesn't matter) tells that it is of long data type.
-
-    //if we don't explicitly mention the data type intellij will assume a whole number value as Int
-    //num is an Int here even though the value is very small
-    var num1 = 0;
-
-    //if the value exceeds the boundary of the int then it is interpreted as Long.
-    var num2 = 9223372036854775807
 }
