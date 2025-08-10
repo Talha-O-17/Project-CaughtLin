@@ -1,26 +1,30 @@
 fun main() {
-    //Data types for real numbers.
-    //Double  and Float
+    /*There are two types of operators.
+      1.Unary(Operates on a single operand)
+      2.Binary(Operates on two operands)
+    */
 
-    //Double is the default
-    //So this is a double
-    var realNum1 = 2.56
-    var realNum2 : Double  = 3.7849342
+    //Unary operation example..
+    var x = -5;
+    println("x = $x")
+    x = -x; // -5 becomes 5;
+    println("x = $x")
 
-    //Even if specify the data type suing :Float we still have to put F after the number
-    //var realnum3 : Float = 3.566. is wrong
-    //we could also do this var realnum3 = 3.566f
-    var realnum3 : Float = 3.566F
+    //There are also x++(post increment)and ++x(pre increment)
 
-    //The difference between double and float is in their precision
-    //the output of code below should be something like this...
-    //fl = 1.1234568
-    //doub = 1.1234567891234568
-    //So we use double when we want more than 8 digits after decimal point or our priority is precision
-    val fl: Float = 1.123456789123456789f
-    val dob: Double = 1.123456789123456789
-    println("fl = $fl")
-    println("doub = $dob")
+    //Pre increment first adds 1 to its value then assings the value.
+    /* Following happens in the code below
+       First x = x + 1; (x = 5 + 1, so x = 6);
+       then num = 6;
+     */
+    var num1 = ++x;
+    println(num1)
 
-
+    //Post increment first assigns the value then increments;
+    /*
+        First num2 = x ( x = 6 so num2 = 6)
+        then 1 gets added to x (x = x + 1, so x = 6 + 1, x = 7)
+     */
+    var num2 = x++
+    println(num2)
 }
